@@ -8,7 +8,7 @@ import { AuthController } from './auth.controller';
   imports: [
     UsersModule,
     JwtModule.register({
-      secret: 'SECRET_KEY', // Use uma chave secreta segura
+      secret: 'SECRET_KEY', 
       signOptions: { expiresIn: '1h' },
     }),
   ],

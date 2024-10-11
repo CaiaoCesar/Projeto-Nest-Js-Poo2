@@ -1,3 +1,5 @@
+//Classe para fazer as requisições
+
 ### Listar todos os usuários
 GET http://localhost:3002/users
 

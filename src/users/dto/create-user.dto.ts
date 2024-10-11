@@ -15,10 +15,10 @@ export class CreateUserDto {
   @IsString()
   password: string;
 
-  @ApiProperty({ example: '11999999999' }) // Agora este campo é obrigatório
-  phone: string; // Removido o decorator @IsOptional
+  @ApiProperty({ example: '11999999999' }) 
+  phone: string; 
 
   @ApiProperty({ example: 'Salinas' })
   @IsString()
-  city: string; // Este campo pode continuar opcional se for desejado
+  city: string; 
 }
