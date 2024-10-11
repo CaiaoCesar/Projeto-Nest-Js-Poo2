@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { UsersModule } from './users/users.module';
-import { PrismaModule } from './prisma/prisma.module'; // Se você tiver um módulo para o Prisma
+import { PrismaService } from 'prisma/prisma.service'; 
+import { AuthModule } from './auth/auth.module'; // Auth Module para rotas de login/registro
 
 @Module({
-  imports: [UsersModule, PrismaModule], // Adicione o UsersModule
+  imports: [UsersModule, AuthModule],
+  providers: [PrismaService],
 })
 export class AppModule {}

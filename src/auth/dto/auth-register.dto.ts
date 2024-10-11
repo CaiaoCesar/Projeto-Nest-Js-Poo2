@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsBoolean, IsEmail, IsEnum, IsOptional, IsString, IsStrongPassword, Matches } from "class-validator";
-import { Role } from 'src/users/enums/role.enum';
+import { Role } from 'users/enums/role.enum';
 
 
 export class AuthRegisterDTO {

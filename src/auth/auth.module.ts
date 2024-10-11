@@ -1,7 +1,18 @@
 import { Module } from '@nestjs/common';
-import { AuthController } from './auth.controller'; // Certifique-se de importar o controller corretamente
+import { JwtModule } from '@nestjs/jwt';
+import { AuthService } from './auth.service';
+import { UsersModule } from '../users/users.module';
+import { AuthController } from './auth.controller';
 
 @Module({
-  controllers: [AuthController], // Registrando o controller no módulo
+  imports: [
+    UsersModule,
+    JwtModule.register({
+      secret: 'SECRET_KEY', // Use uma chave secreta segura
+      signOptions: { expiresIn: '1h' },
+    }),
+  ],
+  providers: [AuthService],
+  controllers: [AuthController],
 })
 export class AuthModule {}

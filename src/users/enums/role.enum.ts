@@ -1,6 +1,6 @@
+// src/users/enums/role.enum.ts
 export enum Role {
-    Client = 1,
-    Employee = 2,
-    Admin = 3,
-  }
-  
+  CLIENT = 'CLIENT',
+  EMPLOYEE = 'EMPLOYEE',
+  ADMIN = 'ADMIN',
+}
