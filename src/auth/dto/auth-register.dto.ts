@@ -4,15 +4,15 @@ import { Role } from 'users/enums/role.enum';
 
 
 export class AuthRegisterDTO {
-  @ApiProperty({ example: "Paulo Souza" })
+  @ApiProperty({ example: "Caio César" })
   @IsString()
   name: string;
 
-  @ApiProperty({ example: "paulo@teste.com" })
+  @ApiProperty({ example: "Leo@Humberto.com" })
   @IsEmail()
   email: string;
 
-  @ApiProperty({ example: "Paulo123" })
+  @ApiProperty({ example: "Leo123" })
   @IsStrongPassword({
     minLength: 6,
     minLowercase: 1,

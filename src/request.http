@@ -1,0 +1,32 @@
+### Listar todos os usuários
+GET http://localhost:3002/users
+
+###
+
+### Criar novo usuário
+POST http://localhost:3002/users
+Content-Type: application/json
+
+{
+    "name": "wender Alves",
+    "email": "Wender@exemplo.com",
+    "password": "senha1234",
+    "phone": "11999999999",
+    "city": "São Paulo"
+}
+
+###
+
+### Buscar usuário pelo ID
+GET http://localhost:3002/users/1
+
+###
+
+### Login de usuário
+POST http://localhost:3002/auth/login
+Content-Type: application/json
+
+{
+    "email": "caio@exemplo.com",
+    "password": "senha123"
+}
