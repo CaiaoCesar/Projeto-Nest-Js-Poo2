@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") 
+}
+
+model User {
+  id         Int      @id @default(autoincrement()) // Adiciona um ID único para cada usuário
+  name       String   @db.VarChar(255)              // Limita o tamanho do nome
+  email      String   @unique @db.VarChar(255)      // Garante que o email seja único e limita o tamanho
+  password   String   @db.VarChar(255)              // Não precisa ser único, já que várias contas podem ter a mesma senha
+  phone      String   @db.VarChar(15)               // Use String para números de telefone para mais flexibilidade
+  city       String   @db.VarChar(100)              // Limite o tamanho do campo cidade
+  role       Role     @default(CLIENT)              // Enum para garantir que o role seja um dos valores permitidos
+  isActive   Boolean  @default(true)                // Usa booleano para indicar se está ativo
+  createdAt  DateTime @default(now())               // Data de criação do usuário
+  updatedAt  DateTime @updatedAt                    // Data da última atualização
+}
+
+enum Role {
+  CLIENT
+  EMPLOYEE
+  ADMIN
+}
