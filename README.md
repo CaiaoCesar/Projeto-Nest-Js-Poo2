@@ -38,7 +38,7 @@ $ npm run start:dev
 # Executar no modo produção
 $ npm run start:prod
 Testando as Rotas
-As rotas da API foram testadas usando o REST Client do Visual Studio Code. Você pode usar o Postman ou o Insomnia para testar as rotas da API também. Abaixo estão alguns exemplos de requisições que você pode fazer:
+As rotas da API foram testadas usando o REST Client do Visual Studio Code por meio do request.http que está no src. Você pode usar o Postman ou o Insomnia para testar as rotas da API também. Abaixo estão alguns exemplos de requisições que você pode fazer:
 
 Listar todos os usuários
 bash
