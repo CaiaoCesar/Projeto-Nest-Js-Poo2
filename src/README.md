@@ -1,6 +1,3 @@
-Conteúdo do documentacao.md
-markdown
-Copy code
 # Documentação do Projeto de API com NestJS
 
 <p align="center">
@@ -9,7 +6,7 @@ Copy code
 
 ## Descrição
 
-Este projeto é uma API desenvolvida com NestJS e TypeScript, utilizando Prisma como ORM para interação com o banco de dados PostgreSQL. A API permite o gerenciamento de usuários e mensagens, incluindo autenticação, criação e listagem de registros.
+Este projeto é uma API desenvolvida com NestJS e TypeScript, utilizando Prisma como ORM para interação com o banco de dados PostgreSQL. A API permite o gerenciamento de usuários e mensagens, incluindo autenticação, criação e listagem de registros. Este projeto foi desenvolvido em conjunto com **Jhonatan Rotta Santana**, **Wender Alves da Silva** e **Luiz Felipe Pereira de Lima**.
 
 ## Configuração do Ambiente
 
@@ -41,7 +38,7 @@ $ npm run start:dev
 # Executar no modo produção
 $ npm run start:prod
 Testando as Rotas
-Você pode usar o Postman ou o Insomnia para testar as rotas da API. Abaixo estão alguns exemplos de requisições que você pode fazer:
+As rotas da API foram testadas usando o REST Client do Visual Studio Code. Você pode usar o Postman ou o Insomnia para testar as rotas da API também. Abaixo estão alguns exemplos de requisições que você pode fazer:
 
 Listar todos os usuários
 bash
@@ -74,3 +71,8 @@ Content-Type: application/json
     "email": "caio@exemplo.com",
     "password": "senha123"
 }
+Banco de Dados
+O banco de dados utilizado é o PostgreSQL 17, que foi criado localmente para o projeto. Todas as interações com o banco de dados são feitas utilizando o Prisma como ORM.
+
+Licença
+Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais informações.
