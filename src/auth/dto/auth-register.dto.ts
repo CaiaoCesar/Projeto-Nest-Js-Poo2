@@ -5,7 +5,7 @@ import { Role } from 'users/enums/role.enum';
 // DTO para registro de autenticação
 export class AuthRegisterDTO {
   
-  @ApiProperty({ example: "Caio César" })
+  @ApiProperty({ example: "Leo Humberto" })
   @IsString()
   name: string;
 

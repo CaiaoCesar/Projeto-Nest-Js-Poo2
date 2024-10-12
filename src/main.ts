@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule); // Cria a aplicação Nest com o módulo principal
 
   const config = new DocumentBuilder() // Configurações para a documentação Swagger
-    .setTitle('API do Projeto') // Define o título da API
-    .setDescription('Documentação da API') // Define a descrição da API
+    .setTitle('API do Projeto Nest') // Define o título da API
+    .setDescription('API do BSI') // Define a descrição da API
     .setVersion('1.0') // Define a versão da API
     .build();
     
