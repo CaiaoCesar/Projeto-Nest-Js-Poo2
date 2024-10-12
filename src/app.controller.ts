@@ -1,12 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller() // Define o controlador
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) {} // Injeta o AppService
 
-  @Get()
+  @Get() // Define o endpoint GET na raiz
   getHello(): string {
+    // Retorna uma mensagem de saudação
     return this.appService.getHello();
   }
 }

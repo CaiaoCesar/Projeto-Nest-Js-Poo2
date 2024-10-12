@@ -1,12 +1,13 @@
+//Gera cliente
 generator client {
   provider = "prisma-client-js"
 }
-
+// implementação do banco de dados
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL") // Definido no .env
 }
-
+// Inserir dados do usuario
 model User {
   id         Int      @id @default(autoincrement())
   name       String   @db.VarChar(255)
@@ -19,7 +20,7 @@ model User {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
-
+// Inserir dados do produto
 model Product {
   id          Int      @id @default(autoincrement())
   name        String   @db.VarChar(255)
@@ -29,7 +30,7 @@ model Product {
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  Int
 }
-
+// Categoria do produto
 model Category {
   id         Int      @id @default(autoincrement())
   name       String   @unique @db.VarChar(255)
